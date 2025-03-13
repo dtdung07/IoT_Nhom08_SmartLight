@@ -1,0 +1,12 @@
+1. Folder Arduino chứa code Arduino IDE, file .hex là file đã biên dịch sẵn dùng để nạp vào Uno R3 mô phỏng trên Proteus
+2. Folder Proteus/Nhom08 chứa mạch mô phỏng của dự án
+3. Folder Python_IoT chứa code python dùng để giao tiếp giữa mạch mô phỏng và firebase
+
+------
+
+- Cài phần mềm vspd.exe để thiết lập liên kết ảo giữa các cổng COM. Sau đó chọn Pair COM1 với COM4 lại với nhau
+
+- Trong Python_IoT chứa 2 mục là:
++ Folder Portable: Môi trường python đã thiết lập sẵn. Chỉ cần chạy file WinPython Command Prompt.exe hoặc WinPython Powershell Prompt.exe, sau đó nhập lệnh "python iot.py" để chạy
+
++ Folder Python: Cần phải tự cài đặt môi trường python. Chỉ chứa code gốc đuôi .py, trước khi chạy cần cài đặt các thư viện bằng câu lệnh: "pip install -r requirenments.txt"
