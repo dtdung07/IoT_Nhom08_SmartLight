@@ -1,50 +1,49 @@
-
-# SmartLight-IoT08 - Hệ Thống Đèn Thông Minh 🚀
+# SmartLight - Hệ Thống Đèn Thông Minh
 
 Dự án mô phỏng hệ thống đèn thông minh với khả năng điều khiển từ xa, thống kê thời gian học tập và tích hợp với Google Assistant. Hệ thống giao tiếp giữa Arduino, Proteus và Firebase thông qua Script Python.
 
-## 🌟 Tính Năng Chính
+## Tính Năng Chính
 
-- **💡 Điều khiển đèn thông minh**: Bật/tắt, điều chỉnh độ sáng, chuyển đổi màu sáng
-- **🌞 Chế độ tự động**: Tự động điều chỉnh độ sáng theo môi trường
-- **⏰ Promodoro Timer**: Hẹn giờ học tập với chế độ học/nghỉ
-- **📊 Thống kê thời gian**: Theo dõi thời gian học tập và độ sáng trung bình
-- **📱 Ứng dụng di động**: Điều khiển từ xa qua app Flutter
-- **🗣️ Google Assistant**: Điều khiển bằng giọng nói
-- **📈 Biểu đồ thống kê**: Hiển thị dữ liệu thời gian học và độ sáng
+- **Điều khiển đèn thông minh**: Bật/tắt, điều chỉnh độ sáng, chuyển đổi màu sáng
+- **Chế độ tự động**: Tự động điều chỉnh độ sáng theo môi trường
+- **Promodoro Timer**: Hẹn giờ học tập với chế độ học/nghỉ
+- **Thống kê thời gian**: Theo dõi thời gian học tập và độ sáng trung bình
+- **Ứng dụng di động**: Điều khiển từ xa qua app Flutter
+- **Google Assistant**: Điều khiển bằng giọng nói
+- **Biểu đồ thống kê**: Hiển thị dữ liệu thời gian học và độ sáng
 
 ---
 
-## 📂 Cấu Trúc Thư Mục
+## Cấu Trúc Thư Mục
 
 ```
-SmartLight-IoT08-dung/
-├── 🛠 Arduino/                    # Code Arduino và file .hex
+iot_smartlight/
+├── Arduino/                    # Code Arduino và file .hex
 │   ├── nhom08/
 │   │   └── nhom08.ino           # Mã nguồn Arduino chính
 │   └── nhom08.ino.hex           # File hex đã biên dịch
-├── 🔌 Proteus/                   # Mạch mô phỏng
+├── Proteus/                   # Mạch mô phỏng
 │   └── Nhom08/
 │       └── Nhom08.pdsprj        # File mô phỏng Proteus
-├── 🐍 Python_IoT/               # Script Python giao tiếp
+├── Python_IoT/               # Script Python giao tiếp
 │   ├── Portable/                # Môi trường Python portable
 │   └── Python/
 │       ├── iot.py              # Script chính
 │       └── requirements.txt    # Thư viện cần thiết
-├── 📱 Flutter/                  # Ứng dụng di động
+├── Flutter/                  # Ứng dụng di động
 │   ├── app-release.apk         # File APK đã biên dịch
 │   └── source/                 # Mã nguồn Flutter
-├── 🌐 NodeJs/                   # Máy chủ thông báo
+├── NodeJs/                   # Máy chủ thông báo
 │   ├── gg assistant.zip        # Google Assistant server
 │   └── Nodejs_Sever_Notification.zip # Notification server
-├── 🔥 Firebase/                 # Dữ liệu Firebase export
+├── Firebase/                 # Dữ liệu Firebase export
 │   └── iot-nhom08-default-rtdb-export.json # Backup dữ liệu Firebase
-└── 🔗 vspd.exe                 # Phần mềm tạo cổng COM ảo
+└── vspd.exe                 # Phần mềm tạo cổng COM ảo
 ```
 
 ---
 
-## 🏗️ Kiến Trúc Hệ Thống
+## Kiến Trúc Hệ Thống
 
 ```
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
@@ -72,13 +71,13 @@ SmartLight-IoT08-dung/
 
 ---
 
-## ⚙️ Thiết Lập Ban Đầu
+## Thiết Lập Ban Đầu
 
-### 1. 📥 Cài đặt `vspd.exe`
+### 1. Cài đặt vspd.exe
 - Sử dụng phần mềm này để thiết lập liên kết ảo giữa các cổng COM
 - Tạo kết nối COM1 với COM4 để tạo kết nối ảo giữa hai cổng
 
-### 2. 🔥 Cấu hình Firebase
+### 2. Cấu hình Firebase
 Dự án sử dụng Firebase project chính:
 
 #### Firebase Project:
@@ -94,16 +93,16 @@ Dự án sử dụng Firebase project chính:
 - `/PROMODORO` - Cài đặt Promodoro
 - `/TIME_NOTIFICATION` - Cấu hình thông báo (tokens, thời gian)
 
-### 3. 🔧 Cấu hình cổng COM
+### 3. Cấu hình cổng COM
 - Mở Device Manager
 - Kiểm tra cổng COM4 có sẵn
 - Cấu hình baud rate: 9600
 
 ---
 
-## 🐍 Chạy Ứng Dụng Python
+## Chạy Ứng Dụng Python
 
-### Cách 1: Dùng Môi Trường Python Portable 💻
+### Cách 1: Dùng Môi Trường Python Portable
 
 1. Vào thư mục **Python_IoT/Portable**
 2. Chạy **WinPython Command Prompt.exe** hoặc **WinPython Powershell Prompt.exe**
@@ -112,7 +111,7 @@ Dự án sử dụng Firebase project chính:
 python iot.py
 ```
 
-### Cách 2: Tự Cài Đặt Python ⚡
+### Cách 2: Tự Cài Đặt Python
 
 1. Cài đặt Python trên máy tính
 2. Vào thư mục **Python_IoT/Python**
@@ -127,7 +126,7 @@ python iot.py
 
 ---
 
-## 🔬 Mô Phỏng Trên Proteus
+## Mô Phỏng Trên Proteus
 
 1. Mở file mô phỏng trong thư mục **Proteus/Nhom08**
 2. Nạp file `.hex` vào Arduino Uno R3
@@ -135,7 +134,7 @@ python iot.py
 
 ---
 
-## 🔄 Nạp Chương Trình Arduino
+## Nạp Chương Trình Arduino
 
 ### Cách 1: Sử dụng file .hex
 - Sử dụng file `nhom08.ino.hex` trong thư mục **Arduino**
@@ -147,7 +146,7 @@ python iot.py
 
 ---
 
-## 🌐 Chạy Code NodeJs
+## Chạy Code NodeJs
 
 ### 1. Cài đặt NodeJs
 - Tải và cài đặt NodeJs từ [nodejs.org](https://nodejs.org)
@@ -170,7 +169,7 @@ node sever.js
 
 ---
 
-## 📲 Cài Đặt App SmartLight
+## Cài Đặt App SmartLight
 
 1. Tìm file `app-release.apk` trong thư mục **Flutter**
 2. Cài đặt lên điện thoại Android
@@ -178,7 +177,7 @@ node sever.js
 
 ---
 
-## 📡 Giao Thức Giao Tiếp
+## Giao Thức Giao Tiếp
 
 ### Định dạng dữ liệu Serial:
 
@@ -201,7 +200,7 @@ P*1*25*5*        # Promodoro: bật, học 25p, nghỉ 5p
 
 ---
 
-## 🔧 Cấu Hình Chi Tiết
+## Cấu Hinh Chi Tiết
 
 ### Arduino Pin Configuration:
 - `A1` - Cảm biến ánh sáng (LDR)
@@ -252,7 +251,7 @@ P*1*25*5*        # Promodoro: bật, học 25p, nghỉ 5p
 
 ---
 
-## 🚀 Hướng Dẫn Sử Dụng
+## Hướng Dẫn Sử Dụng
 
 ### 1. Khởi động hệ thống:
 1. Chạy `vspd.exe` và tạo kết nối COM1-COM4
@@ -279,19 +278,19 @@ P*1*25*5*        # Promodoro: bật, học 25p, nghỉ 5p
 
 ---
 
-## ✅ Tóm Tắt
+## Tóm Tắt
 
-- **🛠 Arduino**: Code điều khiển đèn thông minh với cảm biến LDR
-- **🔌 Proteus**: Mô phỏng mạch điện hoàn chỉnh
-- **🐍 Python**: Script giao tiếp giữa Arduino và Firebase
-- **📱 Flutter**: App di động điều khiển từ xa
-- **🌐 NodeJs**: Máy chủ thông báo và Google Assistant
-- **🔗 vspd.exe**: Tạo cổng COM ảo cho giao tiếp
-- **🔥 Firebase**: Cơ sở dữ liệu thời gian thực
+- **Arduino**: Code điều khiển đèn thông minh với cảm biến LDR
+- **Proteus**: Mô phỏng mạch điện hoàn chỉnh
+- **Python**: Script giao tiếp giữa Arduino và Firebase
+- **Flutter**: App di động điều khiển từ xa
+- **NodeJs**: Máy chủ thông báo và Google Assistant
+- **vspd.exe**: Tạo cổng COM ảo cho giao tiếp
+- **Firebase**: Cơ sở dữ liệu thời gian thực
 
 ---
 
-## 📞 Hỗ Trợ
+## Hỗ Trợ
 
 Nếu gặp vấn đề, hãy kiểm tra:
 1. Kết nối cổng COM
@@ -299,7 +298,7 @@ Nếu gặp vấn đề, hãy kiểm tra:
 3. Cài đặt thư viện Python
 4. Quyền truy cập app
 
-### 🔧 Cập nhật Flutter App Firebase:
+### Cập nhật Flutter App Firebase:
 Để đồng bộ Flutter app với Python script, cần cập nhật:
 1. File `firebase_options.dart` - thay đổi URL thành `https://iot-nhom08-default-rtdb.asia-southeast1.firebasedatabase.app`
 2. File `google-services.json` - cập nhật project ID thành `iot-nhom08`
@@ -307,4 +306,4 @@ Nếu gặp vấn đề, hãy kiểm tra:
 
 ---
 
-**Dự án SmartLight-IoT08 - Hệ thống đèn thông minh cho học tập hiệu quả!** ✨
+**Dự án SmartLight - Hệ thống đèn thông minh cho học tập hiệu quả!**
